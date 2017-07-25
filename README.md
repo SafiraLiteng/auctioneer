@@ -20,14 +20,17 @@ These instructions will get you a copy of the project up and running on your loc
 
 • Installing
 
-⁃ Ruby on Rails
+`⁃ Ruby on Rails
   http://railsapps.github.io/installrubyonrails-mac.html
+  
 ⁃ SQL server
   https://docs.microsoft.com/en-us/sql/database-engine/install-windows/install-sql-server
+  
 ⁃ jQuery
   npm install jquery
+  
 ⁃ Bootstrap 
-  npm install bootstrap
+  npm install bootstrap`
 
 ✰ Setup Instructions ✰
 
