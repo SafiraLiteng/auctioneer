@@ -1,0 +1,13 @@
+if (!biddrs) {
+  const biddrs = document.querySelector('#biddrs');
+}
+
+biddrs.innerHTML = "<%= j render 'biddrs', biddrs: @item.biddrs.order(created_at: :desc) %>";
+
+document
+  .querySelector('#biddrForm')
+  .outerHTML = "<%= j render 'form', biddr: Biddr.new %>";
+
+document.querySelector('#current-price')
+  .innerHTML = "<%= @item.current_price %>";
+  

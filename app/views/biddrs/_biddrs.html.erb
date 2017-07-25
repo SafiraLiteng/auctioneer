@@ -1,0 +1,17 @@
+<% biddrs&.each do |biddr| %>
+<!-- dom is a helper method -->
+  <div id="<%= dom_id(biddr) %>">
+    <p><%= biddr.bid %> 
+      <% if biddr.user.present? %> 
+        by <%= biddr.user.full_name %> 
+      <% end %>
+    </p>
+    <%= link_to '🗑',
+      [@item, biddr],
+      method: :delete,
+      remote: :true,
+      data: { confirm: 'Are you sure?'}
+      %>
+    <hr />
+  </div>
+<% end %>

@@ -1,0 +1,28 @@
+<section id="allitems" class="section-padding">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3 col-sm-4 col-xs-12">
+			        <div class="section-title">
+			          <h2 class="head-title lg-line">Items</h2>
+			          <hr class="botm-line">
+			        </div>
+			    </div>
+			    <div class="col-md-9 col-sm-8 col-xs-12">
+			       <div style="visibility: visible;" class="col-sm-9 more-features-box">
+			          <div class="more-features-box-text">
+			            <div class="more-features-box-text-icon"> <i class="fa fa-angle-right" aria-hidden="true"></i> </div>
+			            <div class="more-features-box-text-description">
+										<% if @user %>
+										  <h1><%= @user.first_name %>'s Liked items</h1>
+										<% end %>
+										<% @items.each do |item| %>
+										  <%= link_to item.title, item_path(item) %>
+										  <hr>
+										<% end %>
+				        </div>
+			          </div>
+			        </div>
+			    </div>
+			</div>
+		</div>
+	</section>

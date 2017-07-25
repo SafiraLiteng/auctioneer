@@ -1,0 +1,15 @@
+<% if user_signed_in? && can?(:like, @item) %>
+  <% if like %>
+    <%= link_to fa_icon('heart lg'),
+      item_like_path(@item, like),
+      method: :delete,
+      remote: true %>
+  <% else %>
+    <%= link_to fa_icon('heart-o lg'),
+      item_likes_path(@item),
+      method: :post,
+      remote: true %>
+  <% end %>
+<% end %>
+<span id="flash-message"></span>
+(<%= 'Click the ❤️ to make easier to track the items you saw and liked.' %>)

@@ -1,0 +1,22 @@
+<section id="contact" class="section-padding">
+	<div class="container">
+
+		<div class="row">
+
+			<div class="col-md-12">
+				<h2 class="ser-title">Contact Us</h2>
+				<hr class="botm-line">
+			</div>
+			<div class="col-md-8 col-sm-8 marb20">
+				<div class="contact-info">
+					<%= simple_form_for :name, url: contact_submit_path do |f| %>
+					  <%= f.input :name %>
+					  <%= f.input :message, :as => :text %>
+					  <%= f.submit :Submit, class: 'btn btn-primary' %>
+					<% end %>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

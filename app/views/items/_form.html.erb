@@ -1,0 +1,28 @@
+<section id="contact" class="section-padding">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h2 class="ser-title">New Item</h2>
+				<hr class="botm-line">
+			</div>
+			<div class="col-md-8 col-sm-8 marb20">
+				<div class="contact-info">
+
+					<%= simple_form_for @item do |f| %>
+
+					<%= f.input :title, required: false,label: 'Item', error: 'Specify your item is mandatory' %>
+					<%= f.input :body, label: 'Description', error: 'Describe your item is mandatory. Minimum 5 characters'  %>
+					<%= f.association :tags,
+					input_html: { multiple: true, class: 'chosen-select' } %>
+					<%= f.association :category,
+					include_blank: true,
+					prompt: 'Choose a category!' %>
+					<%= f.input :image %>
+
+					<%= f.submit class: 'btn btn-primary' %>
+					<% end %>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

@@ -1,0 +1,22 @@
+<section id="contact" class="section-padding">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h2 class="ser-title">Sign Up</h2>
+				<hr class="botm-line">
+			</div>
+			<div class="col-md-8 col-sm-8 marb20">
+				<div class="contact-info">
+					<%= simple_form_for @user do |f| %>
+					  <%= f.input :first_name %>
+					  <%= f.input :last_name %>
+					  <%= f.input :email %>
+					  <%= f.input :password %>
+					  <%= f.input :password_confirmation %>
+					  <%= f.submit class: 'btn btn-primary' %>
+					<% end %>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

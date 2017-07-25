@@ -1,0 +1,56 @@
+<section id="contact" class="section-padding">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-8 col-sm-8 marb20">
+				<div class="contact-info">
+					<h1><%= @item.title %></h1>
+					<p><%= @item.body %></p>
+
+					<p>Tags: <%= @item.tags.map(&:name).join(', ') %>
+
+						<p><strong>Current Price:</strong> $ <span id="current-price"> <%= @item.current_price %></span></p>
+						<p><strong>Category:</strong> <%= @item.category&.name %></p>
+						<p><strong>Author:</strong> <%= @item.user&.full_name %></p>
+
+						<%= image_tag @item.image.url(:medium) if @item.image.present? %>
+
+						<div class="like_button">
+							<%= render "likes/like", like: @like %>
+						</div>
+
+						<% if user_signed_in? %>
+						<% if can? :edit, @item %>
+						<%= link_to 'Edit', edit_item_path(@item) %>
+						<% end %>
+
+						<% if can? :destroy, @item %>
+						<%= link_to 'Delete', item_path(@item),
+						method: :delete,
+						data: { confirm: 'Are you sure?' } %>
+						<% end %>
+						<% end %>
+
+						<!-- <h2>Biddrs</h2> -->
+
+						<% if user_signed_in? %>
+						<%= render 'biddrs/form', biddr: @biddr %>
+						<% end %>
+
+						<div id="biddrs">
+
+							<%= render 'biddrs/biddrs', biddrs: @biddrs %>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+
+
+
+
+	<!-- -->
