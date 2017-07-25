@@ -7,7 +7,6 @@ Auctioneer is a web application built using Ruby on Rails, SQL and Bootstrap.
 These instructions will get you a copy of the project up and running on your local machine.
 
 • Prerequisites
-
 ⁃ Ruby
 ⁃ Rails
 ⁃ SQL
