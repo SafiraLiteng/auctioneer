@@ -20,7 +20,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 • Installing
 
-`⁃ Ruby on Rails
+⁃ Ruby on Rails
   http://railsapps.github.io/installrubyonrails-mac.html
   
 ⁃ SQL server
@@ -30,12 +30,13 @@ These instructions will get you a copy of the project up and running on your loc
   npm install jquery
   
 ⁃ Bootstrap 
-  npm install bootstrap`
+  npm install bootstrap
 
 ✰ Setup Instructions ✰
 
   ⁃ Make sure to run `rails db:create db:seed db:migrate`
-  ⁃ Duplicate the file `config/initializers/app_keys.rb.example` to `config/initializers/app_keys.rb` and set a proper Gmail username and password there
+  
+  ⁃ Duplicate the file `config/initializers/app_keys.rb.example` to `config/initializers/app_keys.rb`                             and set a proper Gmail username and password there
 
 ✰ Author 
 
